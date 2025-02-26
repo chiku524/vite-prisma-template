@@ -4,8 +4,8 @@ import { Footer } from '../components/footer';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "portal.ask" },
-    { name: "description", content: "Welcome to portal.ask!" },
+    { title: "unknown" },
+    { name: "unknown", content: "Welcome to unknown!" },
   ];
 };
 
@@ -14,21 +14,6 @@ export default function Index() {
     <div className="flex flex-col h-screen items-center bg-gradient-to-br from-gray-900 to-blue-800">
       <Nav />
       <div className="flex flex-col items-center gap-16">
-        <header className="flex flex-col items-center gap-9">
-          
-          <div className="h-[144px] w-[434px]">
-            <img
-              src="/logo-light.png"
-              alt="Flexithe"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Flexithe"
-              className="hidden w-full dark:block"
-            />
-          </div>
-        </header>
         <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700 bg-black">
           <p className="leading-6 text-gray-700 dark:text-gray-200">
             What&apos;s next?
