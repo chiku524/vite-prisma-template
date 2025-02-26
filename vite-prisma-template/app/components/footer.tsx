@@ -8,7 +8,7 @@ export function Footer() {
 
 
     return (
-      <div className='bg-gradient-to-br from-blue-800 to-gray-900 w-full h-auto flex flex-col items-center justify-center'>
+      <div className='bg-gradient-to-br from-slate-900 to-gray-800 w-full h-auto flex flex-col items-center justify-center mt-20'>
         <div className='flex flex-row w-full justify-center items-center'>
             <div className='flex flex-row justify-center items-center w-1/2' id='logo'></div>
             <div className='flex flex-row flex-wrap justify-around items-start w-1/3' id='content-container'>

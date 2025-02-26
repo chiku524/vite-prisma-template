@@ -11,28 +11,52 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col h-screen items-center bg-gradient-to-br from-gray-900 to-blue-800">
+    <div className="flex flex-col h-screen items-center bg-gradient-to-br from-gray-900 to-blue-900">
       <Nav />
-      <div className="flex flex-col items-center gap-16">
-        <nav className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700 bg-black">
-          <p className="leading-6 text-gray-700 dark:text-gray-200">
-            What&apos;s next?
-          </p>
-          <ul>
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-3 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      <div className="flex flex-col items-center justify-center mt-12">
+        <h1 className="text-4xl font-bold text-white">Welcome to unknown</h1>
+        <p className="text-white">A place for unknown</p>
+      </div>
+      <div className="flex flex-col items-center justify-center mt-16 border-2 rounded-full min-w-96 min-h-96 bg-gradient-to-br from-teal-900 to-purple-900">
+        <h4 className="-mt-10 text-2xl font-bold text-amber-400">Tokenomics</h4>
+        <div className="mt-10 flex flex-col w-2/3 items-start justify-center">
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+          <div className="flex flex-row w-full items-center justify-between">
+            <p>Community</p>
+            <div className="min-w-[65%] bg-slate-600 rounded">
+              <div className="w-2/3 bg-red-600 h-4 rounded"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
