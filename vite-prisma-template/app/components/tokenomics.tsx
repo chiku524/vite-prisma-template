@@ -7,20 +7,20 @@ export function Tokenomics() {
     const tokenomicsRef = useRef(null);
     
     useLayoutEffect(() => {
+
         gsap.registerPlugin(ScrollTrigger);
-    }, []);
 
-    let tokenomicsTL = gsap.timeline({
-        scrollTrigger: {
-        trigger: tokenomicsRef.current,
-        start: "top center",
-        end: "top 100px",
-        scrub: true,
-        }
-    });
+        let tokenomicsTL = gsap.timeline({
+            scrollTrigger: {
+            trigger: tokenomicsRef.current,
+            start: "top center",
+            end: "top 100px",
+            scrub: true,
+            }
+        });
 
-    useLayoutEffect(() => {
         tokenomicsTL.set(tokenomicsRef.current, { x: -100, opacity: 0 }).to(tokenomicsRef.current, { x: 0, opacity: 1, duration: 1 })
+
     }, []);
 
     return (
