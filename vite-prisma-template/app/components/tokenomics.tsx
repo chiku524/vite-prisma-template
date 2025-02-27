@@ -17,7 +17,9 @@ export function Tokenomics() {
         }
     });
 
-    tokenomicsTL.set(tokenomicsRef.current, { x: -100, opacity: 0 }).to(tokenomicsRef.current, { x: 0, opacity: 1, duration: 1 })
+    useLayoutEffect(() => {
+        tokenomicsTL.set(tokenomicsRef.current, { x: -100, opacity: 0 }).to(tokenomicsRef.current, { x: 0, opacity: 1, duration: 1 })
+    }, []);
 
     return (
         <div className="w-2/3 flex flex-row justify-around max-sm:flex-col" id="tokenomics-container" ref={tokenomicsRef}>

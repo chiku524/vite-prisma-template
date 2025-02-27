@@ -17,7 +17,9 @@ export default function Index() {
 
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-  tl.set(headerRef.current, { scale: 0, opacity: 0, duration: 1, stagger: 0.25 }).to(headerRef.current, { scale: 1, opacity: 1, duration: 1, stagger: 0.25 });
+  useLayoutEffect(() => {
+    tl.set(headerRef.current, { scale: 0, opacity: 0, duration: 1, stagger: 0.25 }).to(headerRef.current, { scale: 1, opacity: 1, duration: 1, stagger: 0.25 });
+  }, []);
 
   return (
     <div className="flex flex-col h-screen items-center bg-gradient-to-br from-gray-900 to-blue-900">
