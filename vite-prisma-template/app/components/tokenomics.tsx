@@ -1,12 +1,11 @@
 import { Link } from "@remix-run/react"
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect, useLayoutEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function Tokenomics() {
     const tokenomicsRef = useRef(null);
+    gsap.registerPlugin(ScrollTrigger);
 
     let tokenomicsTL = gsap.timeline({
         scrollTrigger: {
