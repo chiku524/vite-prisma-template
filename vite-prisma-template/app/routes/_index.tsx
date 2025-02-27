@@ -5,8 +5,6 @@ import { Tokenomics } from '../components/tokenomics';
 import { gsap } from 'gsap';
 import { useEffect, useLayoutEffect, useRef } from 'react';
 
-
-
 export const meta: MetaFunction = () => {
   return [
     { title: "unknown" },
