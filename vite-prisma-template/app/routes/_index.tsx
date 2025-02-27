@@ -1,6 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Nav } from '../components/mainsite-nav';
 import { Footer } from '../components/footer';
+import { Tokenomics } from '../components/tokenomics';
+import { gsap } from 'gsap';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,83 +15,21 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const headerRef = useRef(null);
+
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+  tl.set(headerRef.current, { scale: 0, opacity: 0, duration: 1, stagger: 0.25 }).to(headerRef.current, { scale: 1, opacity: 1, duration: 1, stagger: 0.25 });
+
   return (
     <div className="flex flex-col h-screen items-center bg-gradient-to-br from-gray-900 to-blue-900">
       <Nav />
-      <div className="flex flex-col items-center justify-center mt-12">
-        <h1 className="text-4xl font-bold text-white">Welcome to unknown</h1>
-        <p className="text-white">A place for unknown</p>
+      <div className="flex flex-col items-center justify-center my-24 w-1/2" id="header" ref={headerRef}>
+        <h1 className="text-4xl font-bold text-white mb-5">Welcome to unknown</h1>
+        <p className="text-white text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
       </div>
-      <div className="w-2/3 flex flex-row justify-around max-sm:flex-col" id="tokenomics-container">
-        <div className="flex flex-col items-center justify-center mt-16 border-2 rounded-full min-w-96 min-h-96 max-sm:min-w-56 max-sm:min-h-64  bg-gradient-to-br from-teal-900 to-purple-900">
-          <h4 className="-mt-10 text-2xl font-bold text-amber-400 max-sm:mt-0 max-sm:text-lg">Tokenomics</h4>
-          <div className="mt-10 flex flex-col w-2/3 items-start justify-center max-sm:mt-2">
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-            <div className="flex flex-row w-full items-center justify-between">
-              <p>Community</p>
-              <div className="min-w-[65%] max-sm:min-w-[45%] bg-slate-600 rounded">
-                <div className="w-2/3 bg-red-600 h-4 rounded"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center text-amber-300 ml-10">
-          <h4>Token Distrubution</h4>
-          <p>Here is how we will be distributing our token initially</p>
-        </div>
-      </div>
+      <Tokenomics />
       <Footer />
     </div>
   );
 }
-
-const resources = [
-  {
-    href: "/login",
-    text: "Login / Signup",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth="1.5"
-        className="stroke-gray-600 group-hover:stroke-current dark:stroke-gray-300 w-6 h-6"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
-        />
-      </svg>
-    ),
-  },
-];
