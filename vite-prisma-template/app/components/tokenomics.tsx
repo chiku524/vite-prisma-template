@@ -5,7 +5,10 @@ import { useEffect, useLayoutEffect, useRef } from 'react';
 
 export function Tokenomics() {
     const tokenomicsRef = useRef(null);
-    gsap.registerPlugin(ScrollTrigger);
+    
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+    }, []);
 
     let tokenomicsTL = gsap.timeline({
         scrollTrigger: {
