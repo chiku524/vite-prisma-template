@@ -9,9 +9,6 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
-  define: {
-    "global": {},
-  },
   plugins: [
     remix({
       future: {
