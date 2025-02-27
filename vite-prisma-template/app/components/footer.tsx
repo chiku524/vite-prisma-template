@@ -8,7 +8,7 @@ export function Footer() {
 
 
     return (
-      <div className='bg-gradient-to-br from-slate-900 to-gray-800 w-full h-auto flex flex-col items-center justify-center mt-20'>
+      <div className='bg-gradient-to-br from-slate-900 to-gray-800 w-full h-auto flex flex-col items-center justify-center mt-20 pt-20'>
         <div className='flex flex-row w-full justify-center items-center'>
             <div className='flex flex-row justify-center items-center w-1/2' id='logo'></div>
             <div className='flex flex-row flex-wrap justify-around items-start w-1/3' id='content-container'>
@@ -49,7 +49,7 @@ export function Footer() {
                 </div>
             </div>
         </div>
-        <div className='flex flex-row w-full justify-center items-center mt-24' id='copyrights'>
+        <div className='flex flex-row w-full justify-center items-center mt-24 py-12' id='copyrights'>
             Copyrights Reserved, 2025. All Rights Reserved.
         </div>
       </div>
